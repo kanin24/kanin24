@@ -11,7 +11,7 @@ set <- function(y){
    m <<- NULL
 }
 get <- function()x
-setInverse <- function(inverse) j <<- inverse
+setInverse <- function(inverse) m <<- inverse
 getInverse <- function() m
   list(set = set, get = get,
   setInverse = setInverse,
