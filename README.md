@@ -12,7 +12,7 @@ set <- function(y){
 }
 get <- function()x
 setInverse <- function(inverse) j <<- inverse
-getInverse <- function() j
+getInverse <- function() m
   list(set = set, get = get,
   setInverse = setInverse,
   getInverse = getInverse)
@@ -23,12 +23,12 @@ getInverse <- function() j
 
 cacheSolve <- function(x, ...) {
 m <- x$getInverse()
-if(!is.null(j)){
+if(!is.null(m)){
   message("getting cached data")
-  return(j)
+  return(m)
 }
 mat <- x$get()
 m <- solve(mat, ...)
-x$setInverse(j)
+x$setInverse(m)
 m
 }
